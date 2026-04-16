@@ -1,0 +1,109 @@
+PROJECT CONTEXT:
+This is a Next.js 13+ (App Router) full-stack school management system.
+
+Tech stack:
+- Next.js (App Router)
+- TypeScript
+- Tailwind CSS
+- NextAuth for authentication
+- SQLite (app.db)
+- API routes inside /app/api
+
+Existing structure:
+- Role-based dashboards:
+  - /dashboard/admin
+  - /dashboard/teacher
+  - /dashboard/student
+  - /dashboard/institution
+- Admin APIs already exist under:
+  /app/api/admin/*
+    - users
+    - pending-teachers
+    - pending-courses
+    - approve/reject APIs
+    - dashboard stats
+
+OBJECTIVE:
+Enhance and build a COMPLETE ADMIN PANEL with professional UI + full functionality.
+
+ADMIN PANEL REQUIREMENTS:
+
+1. DASHBOARD (/dashboard/admin)
+- Show stats cards:
+  - Total Users
+  - Total Students
+  - Total Teachers
+  - Total Courses
+  - Pending Approvals
+- Add charts (use chart library like recharts or chart.js):
+  - User growth
+  - Course creation trends
+
+2. USER MANAGEMENT (/dashboard/admin/users)
+- Table with:
+  - Name
+  - Email
+  - Role (student/teacher/admin)
+  - Status (active/pending)
+- Features:
+  - Search + filter
+  - Delete user
+  - Change role
+  - Activate/Deactivate
+
+3. COURSE MANAGEMENT (/dashboard/admin/courses)
+- Show all courses
+- Approve / Reject courses
+- View course details
+- Delete course
+
+4. APPROVAL SYSTEM (/dashboard/admin/approvals)
+- Pending teachers
+- Pending courses
+- Approve / Reject buttons
+- Show details before approval
+
+5. UI/UX IMPROVEMENTS
+- Use reusable components from /components/ui
+- Add:
+  - Sidebar navigation (Admin only)
+  - Top navbar
+  - Loading skeletons
+  - Toast notifications
+  - Modal dialogs for actions
+
+6. SECURITY
+- Protect admin routes using NextAuth
+- Only allow role === "admin"
+
+7. API INTEGRATION
+- Use existing APIs:
+  - /api/admin/users
+  - /api/admin/pending-teachers
+  - /api/admin/pending-courses
+  - /api/admin/approve-*
+  - /api/admin/reject-*
+- If missing, generate new APIs
+
+8. CODE STYLE
+- Use clean, modular components
+- Follow existing folder structure
+- Use server + client components properly
+- Use TypeScript types from /lib/types
+
+9. BONUS FEATURES (if possible)
+- Pagination for tables
+- Export data (CSV)
+- Admin profile section
+- Activity logs
+
+OUTPUT FORMAT:
+- Generate:
+  1. Updated pages inside /app/(dashboard)/admin/*
+  2. New reusable components if needed
+  3. API improvements if required
+  4. Clean, production-ready code
+
+IMPORTANT:
+Do NOT rewrite the entire project.
+Only enhance and extend the ADMIN PANEL using the existing structure.
